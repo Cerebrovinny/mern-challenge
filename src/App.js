@@ -13,11 +13,15 @@ import {
   MDBIcon
 } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
+import Upload from './components/Upload';
 
 class App extends Component {
   render() {
     return (
-      <NavbarPage />
+      <React.Fragment>
+        <NavbarPage />
+        <Upload />
+      </React.Fragment>
     )
   }
 }
