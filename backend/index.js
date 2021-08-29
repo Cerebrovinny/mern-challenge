@@ -17,6 +17,10 @@ app.use(require('./routes'));
 
 const uri = process.env.ATLAS_URI;
 
+/**
+ * Database Setup
+ */
+
 mongoose.connect(uri, {
     useNewUrlParser: true
 });
@@ -25,5 +29,7 @@ const connection = mongoose.connection;
 connection.once("open", () =>
     console.log("MongoDB connection established successfully!")
 )
+
+/** */
 
 app.listen(port, () => console.log(`The app is running on Port: ${port}`))
